@@ -115,17 +115,3 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-footer {
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 2rem;
-}
-footer .attribution {
-  font-size: 11px;
-  text-align: center;
-  color: #4e5d73;
-}
-footer .attribution a {
-  color: #cee3e9;
-}/*# sourceMappingURL=style.css.map */
