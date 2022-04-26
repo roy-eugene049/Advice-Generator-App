@@ -1,0 +1,131 @@
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  background: $Dark-Blue;
+  @media (min-width: 600px) {
+    justify-content: center;
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+.advice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 325px;
+  width: 340px;
+  margin-top: 8rem;
+  padding: 2rem 1.5rem;
+  color: $Light-Cyan;
+  background: $Dark-Grayish-Blue;
+  border-radius: 0.7rem;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba($color: black, $alpha: 0.3);
+
+  @media (min-width: 600px) {
+    margin-top: -1rem;
+    min-height: 330px;
+    width: 540px;
+  }
+  @media (min-width: 1024px) {
+  }
+  h1 {
+    font-size: 11px;
+    color: $Neon-Green;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    justify-self: flex-start;
+  }
+  q {
+    text-align: center;
+    font-size: 24px;
+    @media (min-width: 600px) {
+      font-size: 28px;
+    }
+  }
+
+  .divider {
+    display: block;
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+
+  .divider-desk {
+    display: none;
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+
+  .advice-button {
+    position: absolute;
+    bottom: -30px;
+    left: 137.5px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background: $Neon-Green;
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    @media (min-width: 600px) {
+      left: 236px;
+    }
+
+    &:hover {
+      @media (min-width: 600px) {
+        background: hsl(150, 100%, 73%);
+        box-shadow: 0px 0px 25px hsl(150, 100%, 66%);
+        transform: scale(1.05);
+      }
+    }
+    &::before {
+      position: absolute;
+      height: 65px;
+      width: 65px;
+      content: "";
+      background: url(../images/icon-dice.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 2rem;
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $Grayish-Blue;
+    a {
+      color: $Light-Cyan;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  background: #1f2632;
+}
+@media (min-width: 600px) {
+  body {
+    justify-content: center;
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+.advice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 325px;
+  width: 340px;
+  margin-top: 8rem;
+  padding: 2rem 1.5rem;
+  color: #cee3e9;
+  background: #323a49;
+  border-radius: 0.7rem;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 600px) {
+  .advice-card {
+    margin-top: -1rem;
+    min-height: 330px;
+    width: 540px;
+  }
+}
+.advice-card h1 {
+  font-size: 11px;
+  color: #52ffa8;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  justify-self: flex-start;
+}
+.advice-card q {
+  text-align: center;
+  font-size: 24px;
+}
+@media (min-width: 600px) {
+  .advice-card q {
+    font-size: 28px;
+  }
+}
+.advice-card .divider {
+  display: block;
+}
+@media (min-width: 600px) {
+  .advice-card .divider {
+    display: none;
+  }
+}
+.advice-card .divider-desk {
+  display: none;
+}
+@media (min-width: 600px) {
+  .advice-card .divider-desk {
+    display: block;
+  }
+}
+.advice-card .advice-button {
+  position: absolute;
+  bottom: -30px;
+  left: 137.5px;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background: #52ffa8;
+  z-index: 9999;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+@media (min-width: 600px) {
+  .advice-card .advice-button {
+    left: 236px;
+  }
+}
+@media (min-width: 600px) {
+  .advice-card .advice-button:hover {
+    background: #75ffba;
+    box-shadow: 0px 0px 25px #52ffa8;
+    transform: scale(1.05);
+  }
+}
+.advice-card .advice-button::before {
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  content: "";
+  background: url(../images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 2rem;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #4e5d73;
+}
+footer .attribution a {
+  color: #cee3e9;
+}/*# sourceMappingURL=style.css.map */
